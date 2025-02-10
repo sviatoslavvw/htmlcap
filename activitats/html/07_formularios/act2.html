@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra - Altavoces</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Compra tu Altavoz</h2>
+
+    <form action="procesar_pedido.php" method="POST">
+        <label for="modelo">Modelo:</label>
+        <select id="modelo" name="modelo" required>
+            <option value="R4">R4</option>
+            <option value="R5">R5</option>
+            <option value="SR1">SR1</option>
+        </select>
+
+        <label for="potencia">Potencia Máxima (50-100W):</label>
+        <input type="number" id="potencia" name="potencia" min="50" max="100" required>
+
+        <label for="bluetooth">¿Bluetooth?</label>
+        <select id="bluetooth" name="bluetooth" required>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" placeholder="Ejemplo: Negro, Azul..." required>
+
+        <button type="submit">Comprar</button>
+    </form>
+
+</body>
+</html>

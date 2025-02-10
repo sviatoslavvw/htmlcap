@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Smartphones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            text-align: center;
+        }
+        .contenedor {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            background: white;
+            text-align: left;
+            position: absolute;
+            width: calc(100% - 42px);
+            border: 1px solid #ccc;
+            display: none;
+        }
+        li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        li:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>📱 Buscador de Smartphones</h1>
+
+        <label for="marca">🔍 Marca:</label>
+        <input type="text" id="marca" placeholder="Escribe una marca..." onkeyup="mostrarSugerencias()">
+        <ul id="sugerencias"></ul>
+
+        <label for="precio">💰 Rango de Precio:</label>
+        <select id="precio">
+            <option value="menos-200">Menos de $200</option>
+            <option value="200-500">$200 - $500</option>
+            <option value="500-1000">$500 - $1000</option>
+            <option value="mas-1000">Más de $1000</option>
+        </select>
+
+        <button onclick="buscar()">🔎 Buscar</button>
+    </div>
+
+    <script>
+        const marcas = ["Apple", "Samsung", "Xiaomi", "Huawei", "OnePlus", "Google", "Sony", "Motorola"];
+        const inputMarca = document.getElementById("marca");
+        const listaSugerencias = document.getElementById("sugerencias");
+
+        function mostrarSugerencias() {
+            const valor = inputMarca.value.toLowerCase();
+            listaSugerencias.innerHTML = "";
+            if (valor) {
+                const filtradas = marcas.filter(marca => marca.toLowerCase().startsWith(valor));
+                if (filtradas.length > 0) {
+                    listaSugerencias.style.display = "block";
+                    filtradas.forEach(marca => {
+                        const item = document.createElement("li");
+                        item.textContent = marca;
+                        item.onclick = () => {
+                            inputMarca.value = marca;
+                            listaSugerencias.style.display = "none";
+                        };
+                        listaSugerencias.appendChild(item);
+                    });
+                } else {
+                    listaSugerencias.style.display = "none";
+                }
+            } else {
+                listaSugerencias.style.display = "none";
+            }
+        }
+
+        function buscar() {
+            const marca = inputMarca.value;
+            const precio = document.getElementById("precio").value;
+            if (marca) {
+                alert(`🔍 Buscando smartphones de ${marca} en el rango de precio ${precio}...`);
+            } else {
+                alert("⚠️ Por favor, selecciona una marca.");
+            }
+        }
+    </script>
+
+</body>
+</html>

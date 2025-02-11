@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Botón Centrado con Redirección</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .boton {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .boton:active {
+            transform: scale(0.9);
+        }
+    </style>
 </head>
 <body>
-    <button>
-        <a href="https://sviatoslavvw.github.io/htmlcap/activitats/menu_activitats.html">Activitats</a>
+
+    <button class="boton" onclick="window.location.href='https://sviatoslavvw.github.io/htmlcap/activitats/menu_activitats.html'">
+        Activitats
     </button>
+
 </body>
 </html>

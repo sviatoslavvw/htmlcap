@@ -1,21 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Выпадающие списки</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 150px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .dropdown-content a:hover {
+            background-color: lightgray;
+        }
+        .dropdown-content.show {
+            display: block;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    </style>
 </head>
 <body>
-    <div class="activitats"></div>
-    <details>
-        <summary>Нажми сюда</summary>
-        <ul>
-          <li><a href="#">Пункт 1</a></li>
-          <li><a href="#">Пункт 2</a></li>
-          <li><a href="#">Пункт 3</a></li>
-        </ul>
-      </details>
-      
+
+<div class="navbar">
+    <div class="dropdown" onclick="toggleDropdown('dropdown11')">
+        <button>activitat11</button>
+        <div id="dropdown11" class="dropdown-content">
+            <a href="html/11_topic/act1.html">Act 1</a>
+            <a href="html/11_topic/act2.html">Act 2</a>
+            <a href="html/11_topic/act3.html">Act 3</a>
+        </div>
+    </div>
+    <div class="dropdown" onclick="toggleDropdown('dropdown12')">
+        <button>activitat12</button>
+        <div id="dropdown12" class="dropdown-content">
+            <a href="html/12_topic/act1.html">Act 1</a>
+            <a href="html/12_topic/act2.html">Act 2</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown(id) {
+        let dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(dropdown => {
+            if (dropdown.id !== id) {
+                dropdown.classList.remove("show");
+            }
+        });
+        let currentDropdown = document.getElementById(id);
+        currentDropdown.classList.toggle("show");
+    }
+</script>
 
 </body>
 </html>

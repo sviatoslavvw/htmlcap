@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento con variables CSS</title>
+    <style>
+        :root {
+            --color-principal: #3498db; 
+        }
+
+        h1 {
+            color: var(--color-principal); 
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        a {
+            color: var(--color-principal); 
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi página</h1>
+    <p>
+        Este es un párrafo con algunos <a href="#">enlaces útiles</a>. 
+        También puedes visitar <a href="#">este otro enlace</a> para más información.
+        ¡Espero que disfrutes tu visita!
+    </p>
+</body>
+</html>

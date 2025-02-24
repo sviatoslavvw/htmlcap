@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Secreto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .documento {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .secreto {
+            background-color: black;
+            color: black;
+            padding: 2px 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .secreto:hover::after {
+            content: " (¡Información sensible!)";
+            color: #e74c3c;
+            font-size: 0.8em;
+        }
+
+        .nota {
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="documento">
+        <h1>Documento Secreto</h1>
+        <p>
+            Mi nombre es <span class="secreto">[Nombre Oculto]</span> y soy el agente con el número <span class="secreto">[Número Oculto]</span>.
+        </p>
+        <p>
+            El objetivo está siendo <span class="secreto">[Objetivo Oculto]</span>.
+        </p>
+        <p>
+            La misión se llevará a cabo en <span class="secreto">[Ubicación Ocultada]</span> el día <span class="secreto">[Fecha Ocultada]</span>.
+        </p>
+        <div class="nota">
+            Nota: Pase el cursor sobre el texto en negro para ver advertencias.
+        </div>
+    </div>
+</body>
+</html>

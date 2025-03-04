@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Formateado</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .texto {
+            font-size: 1.1em;
+            color: #444;
+            text-align: justify;
+        }
+
+        .texto em {
+            font-style: italic;
+        }
+
+        .texto strong {
+            font-weight: bold;
+            color: black;
+        }
+
+        .resaltado {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        .amarillo {
+            background-color: yellow;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="texto">
+            Aquellas cacerías, sin embargo, acababan muchas veces en tragedia. <em>Fue en uno de esos lances</em>, por ejemplo, donde el enigmático protagonista de esta novela, el capitán Ahab, <strong>perdió una pierna</strong>, la sustituyó por otra de marfil y concibió un odio mortal hacia aquella colosal ballena blanca y solitaria que sembraba el terror por mares sin civilizar.
+        </p>
+        <p class="texto resaltado">
+            LO QUE DEBERÍAMOS HACER AHORA, SIN EMBARGO, ES DETERMINAR LAS RAZONES DE ESE <strong>ODIO INEXTINGUIBLE</strong>. SEAMOS CAUTOS Y NO AVENTUREMOS HIPÓTESIS PRECIPITADAS. PUEDE QUE LA MUTILACIÓN DE AHAB NO TUVIESE NADA QUE VER PORQUE TODOS SABEMOS QUE HAY ODIOS QUE ENCUENTRAN SUS MÁS SECRETAS MOTIVACIONES MUCHO MÁS ALLÁ DE LAS COSAS QUE HAN SUCEDIDO EN ESTE MUNDO Y QUE <span class="amarillo">ACTÚAN SOBRE NOSOTROS A NIVEL INCONSCIENTE</span>.
+        </p>
+    </div>
+</body>
+</html>

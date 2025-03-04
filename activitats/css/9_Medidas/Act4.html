@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Párrafo con Efecto de Subrayado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        p {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .subrayado {
+            background-color: rgba(255, 235, 59, 0.5); 
+            padding: 2px 4px;
+            border-radius: 3px;
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Este es un <strong class="subrayado">párrafo</strong> de ejemplo donde algunas palabras están resaltadas con un efecto de <strong class="subrayado">subrayado</strong> y un fondo amarillo semitransparente. Este estilo se aplica a las palabras que están dentro de la etiqueta <strong class="subrayado">&lt;strong&gt;</strong> y tienen la clase <strong class="subrayado">subrayado</strong>.
+    </p>
+</body>
+</html>

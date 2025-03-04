@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto de Escalera con Párrafos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Ancho inicial */
+        }
+
+        /* Ajustes de anchura para crear el efecto de escalera */
+        p:nth-child(1) {
+            width: 80%;
+        }
+
+        p:nth-child(2) {
+            width: 70%;
+        }
+
+        p:nth-child(3) {
+            width: 60%;
+        }
+
+        p:nth-child(4) {
+            width: 50%;
+        }
+
+        p:nth-child(5) {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <p>Este es el primer párrafo. Tiene un ancho del 80%.</p>
+    <p>Este es el segundo párrafo. Tiene un ancho del 70%.</p>
+    <p>Este es el tercer párrafo. Tiene un ancho del 60%.</p>
+    <p>Este es el cuarto párrafo. Tiene un ancho del 50%.</p>
+    <p>Este es el quinto párrafo. Tiene un ancho del 40%.</p>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat entre dos personas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .message.other {
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            margin: 0 10px;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+        }
+
+        .message.other .message-content {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message">
+            <div class="avatar">A</div>
+            <div class="message-content">
+                <div class="name">Alice</div>
+                <div class="date">10:15 AM</div>
+                <div class="text">Hola, ¿cómo estás?</div>
+            </div>
+        </div>
+
+        <div class="message other">
+            <div class="avatar">B</div>
+            <div class="message-content">
+                <div class="name">Bob</div>
+                <div class="date">10:16 AM</div>
+                <div class="text">¡Hola! Estoy bien, ¿y tú?</div>
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="avatar">A</div>
+            <div class="message-content">
+                <div class="name">Alice</div>
+                <div class="date">10:17 AM</div>
+                <div class="text">Todo bien, gracias. ¿Qué planes tienes para hoy?</div>
+            </div>
+        </div>
+
+        <div class="message other">
+            <div class="avatar">B</div>
+            <div class="message-content">
+                <div class="name">Bob</div>
+                <div class="date">10:18 AM</div>
+                <div class="text">Pensaba ir al cine. ¿Te apetece unirte?</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

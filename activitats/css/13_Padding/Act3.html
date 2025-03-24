@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 24px;
+            color: #666;
+        }
+        
+        .faq-item.open .faq-question::after {
+            content: "-";
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: 16px;
+            color: #666;
+            margin-top: 0;
+        }
+        
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            margin-top: 15px;
+        }
+        
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3 class="faq-question">¿Qué métodos de pago se ofrecen?<span class="emoji">😊</span></h3>
+            <div class="faq-answer"></div>
+        </div>
+        
+        <div class="faq-item open">
+            <h3 class="faq-question">¿Cómo puedo cambiarme a un plan diferente?<span class="emoji">😊</span></h3>
+            <div class="faq-answer">
+                <p>Puedes cambiarte a un nuevo plan en cualquier momento: para ello, entra en la página de Facturación de tu cuenta. Selecciona el plan al que deseas cambiarte y podrás empezar a usar las nuevas funciones de inmediato.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">¿Puedo optar por comprar créditos?<span class="emoji">😊</span></h3>
+            <div class="faq-answer"></div>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">¿Hay precios especiales para quienes envían grandes volúmenes de correos electrónicos?<span class="emoji">😊</span></h3>
+            <div class="faq-answer"></div>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">¿Qué sucede si llego al límite de envíos o contactos?<span class="emoji">😊</span></h3>
+            <div class="faq-answer"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('open');
+                
+                // Cerrar los demás items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

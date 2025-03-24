@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailchimp - Planes de precios</title>
+    <style>
+        :root {
+            --yellow: #FFE01B;
+            --black: #241C15;
+            --gray: #6B6B6B;
+            --light-gray: #F5F5F5;
+            --green: #00AB84;
+            --blue: #0066CC;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--black);
+            line-height: 1.5;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-column {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .plan-header {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            flex-grow: 1;
+        }
+        
+        .plan-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+        
+        .plan-description {
+            font-size: 15px;
+            color: var(--gray);
+            margin: 0 0 20px 0;
+            min-height: 60px;
+        }
+        
+        .price-container {
+            margin: 20px 0;
+        }
+        
+        .price-from {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 5px;
+        }
+        
+        .price-amount {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .price-period {
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        .price-note {
+            font-size: 12px;
+            color: var(--gray);
+            margin: 5px 0 20px 0;
+        }
+        
+        .contact-question {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: block;
+            background-color: var(--yellow);
+            color: var(--black);
+            text-align: center;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.2s;
+            margin-bottom: 25px;
+        }
+        
+        .free .cta-button {
+            background-color: var(--black);
+            color: white;
+        }
+        
+        .cta-button:hover {
+            background-color: #f5d500;
+        }
+        
+        .free .cta-button:hover {
+            background-color: #333;
+        }
+        
+        .recommended-badge {
+            background-color: var(--yellow);
+            color: var(--black);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .features-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            padding: 0 25px;
+        }
+        
+        .features-list {
+            padding: 0 25px 25px;
+            margin: 0;
+            list-style: none;
+            flex-grow: 1;
+        }
+        
+        .feature-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        
+        .feature-item:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+        }
+        
+        .about-link {
+            display: block;
+            text-align: center;
+            color: var(--blue);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+        }
+        
+        .about-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 1200px) {
+            .pricing-table {
+                flex-wrap: wrap;
+            }
+            
+            .pricing-column {
+                max-width: calc(50% - 20px);
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-column {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-table">
+        <div class="pricing-column premium">
+            <div class="plan-header">
+                <h2 class="plan-name">Premium</h2>
+                <p class="plan-description">Funciones avanzadas para profesionales que necesitan más personalización</p>
+                <div class="price-container">
+                    <div class="price-from">Desde</div>
+                    <div class="price-amount">299</div>
+                    <span class="price-period">/mes</span>
+                </div>
+                <div class="price-note">basado en 10.000 contactos*</div>
+                <div class="contact-question">¿Cuántos contactos tienes?</div>
+                <a href="#" class="cta-button">Compra ahora</a>
+                <div class="recommended-badge">Recomendado por Mailchimp</div>
+            </div>
+            
+            <h3 class="features-title">Todo lo que incluye el plan Standard, más:</h3>
+            <ul class="features-list">
+                <li class="feature-item">Segmentación avanzada</li>
+                <li class="feature-item">Pruebas multivariantes</li>
+                <li class="feature-item">Informes comparativos</li>
+                <li class="feature-item">Puestos ilimitados y acceso basado en funciones</li>
+                <li class="feature-item">Asistencia técnica telefónica</li>
+            </ul>
+            
+            <a href="#" class="about-link">Acerca de Premium</a>
+        </div>
+        
+        <div class="pricing-column">
+            <div class="plan-header">
+                <h2 class="plan-name">Standard</h2>
+                <p class="plan-description">Herramientas de optimización y automatización basadas en datos para empresas que desean crecer más rápido</p>
+                <div class="price-container">
+                    <div class="price-from">Desde</div>
+                    <div class="price-amount">14</div>
+                    <span class="price-period">/mes</span>
+                </div>
+                <div class="price-note">basado en 500 contactos*</div>
+                <div class="contact-question">¿Cuántos contactos tienes?</div>
+                <a href="#" class="cta-button">Compra ahora</a>
+            </div>
+            
+            <h3 class="features-title">Todo lo incluido en el plan Essentials, más:</h3>
+            <ul class="features-list">
+                <li class="feature-item">Creador de recorridos del cliente + Puntos de ramificación</li>
+                <li class="feature-item">Optimización de la hora de envío</li>
+                <li class="feature-item">Redireccionamiento conductual</li>
+                <li class="feature-item">Plantillas personalizadas</li>
+                <li class="feature-item">Contenido dinámico</li>
+            </ul>
+            
+            <a href="#" class="about-link">Acerca de Standard</a>
+        </div>
+        
+        <div class="pricing-column">
+            <div class="plan-header">
+                <h2 class="plan-name">Essentials</h2>
+                <p class="plan-description">Ideal para los que solo envían correos electrónicos y quieren asistencia a su alcance</p>
+                <div class="price-container">
+                    <div class="price-from">Desde</div>
+                    <div class="price-amount">9</div>
+                    <span class="price-period">/mes</span>
+                </div>
+                <div class="price-note">basado en 500 contactos*</div>
+                <div class="contact-question">¿Cuántos contactos tienes?</div>
+                <a href="#" class="cta-button">Compra ahora</a>
+            </div>
+            
+            <h3 class="features-title">Todo lo que incluye el plan Free, más:</h3>
+            <ul class="features-list">
+                <li class="feature-item">Plantillas de correo electrónico</li>
+                <li class="feature-item">Recorridos con varios pasos</li>
+                <li class="feature-item">Imagen corporativa personalizada</li>
+                <li class="feature-item">Pruebas A/B</li>
+                <li class="feature-item">Asistencia técnica ininterrumpida (24/7) por correo electrónico y chat</li>
+            </ul>
+            
+            <a href="#" class="about-link">Acerca de Essentials</a>
+        </div>
+        
+        <div class="pricing-column free">
+            <div class="plan-header">
+                <h2 class="plan-name">Free</h2>
+                <p class="plan-description">Todas las herramientas multicanal que necesitas para desarrollar tu negocio y hacer crecer tu público</p>
+                <div class="price-container">
+                    <div class="price-amount">0</div>
+                    <span class="price-period">/mes</span>
+                </div>
+                <div class="price-note">basado en 2.000 contactos*</div>
+                <div class="contact-question">¿Cuántos contactos tienes?</div>
+                <a href="#" class="cta-button">Registrate gratis</a>
+            </div>
+            
+            <h3 class="features-title">Todo lo que incluye el plan Free:</h3>
+            <ul class="features-list">
+                <li class="feature-item">Marketing CRM</li>
+                <li class="feature-item">Asistente Creativo</li>
+                <li class="feature-item">Creador de sitios web Dominio de Mailchimp</li>
+                <li class="feature-item">Páginas de destino y formularios</li>
+            </ul>
+            
+            <a href="#" class="about-link">Acerca de Free</a>
+        </div>
+    </div>
+</body>
+</html>

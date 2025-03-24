@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailchimp - Potencia tus ventas</title>
+    <style>
+        :root {
+            --yellow: #FFE01B;
+            --black: #241C15;
+            --gray: #6B6B6B;
+            --light-gray: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: var(--black);
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .text-content {
+            flex: 1;
+        }
+        
+        .image-content {
+            flex: 1;
+        }
+        
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0 0 24px 0;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin: 0 0 40px 0;
+            color: var(--gray);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        
+        .button-primary {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+        
+        .button-secondary {
+            background-color: transparent;
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+        
+        .button-primary:hover {
+            background-color: #f5d500;
+        }
+        
+        .button-secondary:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+        
+        .footer-note {
+            color: var(--gray);
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer-note a {
+            color: var(--black);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <h1>Ponte manos a la obra y aumenta las ventas</h1>
+            <p class="subtitle">
+                Consigue que tus clientes interactúen y haz crecer tu negocio con la plataforma de marketing avanzada pero fácil de usar de Mailchimp.
+            </p>
+            <div class="button-group">
+                <a href="#" class="button button-primary">Suscríbete</a>
+                <a href="#" class="button button-secondary">Comparar planes</a>
+            </div>
+            <div class="footer-note">
+                Mailchimp ha sido adquirida por Intuit. Nuestro cofundador y CEO compartió la noticia con nuestros clientes. <a href="#">Léela aquí en inglés</a>.
+            </div>
+        </div>
+        
+        <div class="image-content">
+            <!-- Reemplaza con tu imagen real -->
+            <img src="https://th.bing.com/th/id/OIP.ZwNX-VvaAQ8_wsBhkR5YrwHaDV?rs=1&pid=ImgDetMain" alt="Plataforma Mailchimp">
+        </div>
+    </div>
+</body>
+</html>
